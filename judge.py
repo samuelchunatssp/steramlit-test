@@ -10,7 +10,7 @@ st.write('<style>div.row-widget.stRadio > div{flex-direction:row;justify-content
 answer = []
 score = [25,50,100]
 for i in range(len(score)):
-    chose = st.radio('Question'+str(i+1)+':'+score[i], ("0", "1"))
+    chose = st.radio('Question'+str(i+1)+':'+str(score[i]), ("0", "1"))
     answer.append(int(chose))
 st.write(f"Answer: {answer}")
 finalscore = sumProduct(answer, score)
