@@ -9,12 +9,9 @@ st.write('<style>div.row-widget.stRadio > div{flex-direction:row;justify-content
 
 answer = []
 score = [25,50,100]
-chose = st.radio('第一題', ("0", "1"))
-answer.append(int(chose))
-chose = st.radio('第二題', ("0", "1"))
-answer.append(int(chose))
-chose = st.radio('第三題', ("0", "1"))
-answer.append(int(chose))
+for i in range(len(score)):
+    chose = st.radio('Question'+str(i+1), ("0", "1"))
+    answer.append(int(chose))
 st.write(f"Answer: {answer}")
 finalscore = sumProduct(answer, score)
 st.write(f"final: {finalscore}")
